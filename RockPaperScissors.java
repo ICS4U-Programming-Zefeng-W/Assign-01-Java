@@ -17,7 +17,6 @@ class RockPaperScissors {
   
   // Reads input of user and compares it to computer's input, and outputs result
   public static void main(String[] args) {
-    boolean start = true;
     int playerNum = 0;
     String playerMove = "";
     Scanner scannerObj = new Scanner(System.in);
