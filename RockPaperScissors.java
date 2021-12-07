@@ -13,9 +13,10 @@ import java.util.Scanner;
 
 // class RockPaperScissors.
 class RockPaperScissors {
+ 
+  // Array of possible moves
   public static String[] moves = {"rock", "paper", "scissors"};
   
-  // Reads input of user and compares it to computer's input, and outputs result
   public static void main(String[] args) {
     int playerNum = 0;
     String playerMove = "";
@@ -23,6 +24,7 @@ class RockPaperScissors {
     while (true) {
       int computerNum = (int) (Math.random() * 3);
       String computerMove = moves[computerNum];
+      // Ask user for a move and reads input
       System.out.println("Please enter either 0(rock), 1(paper), or 2(scissors): ");
       try {
         playerNum = Integer.parseInt(scannerObj.next());
@@ -31,6 +33,7 @@ class RockPaperScissors {
         System.out.println("Please enter an integer of 0, 1, or 2.");
         continue;
       }
+      // Displays result
       if (compareMoves(playerNum, computerNum) == 1) {
         System.out.printf("Player picked %s and the computer picked %s, so Player wins!\n",
                           playerMove, computerMove);
@@ -45,6 +48,7 @@ class RockPaperScissors {
     }
   }
 
+  // Compare player’s move with computer’s move and checks to see who won
   public static int compareMoves(int playerMove, int computerMove) {
     int playerWin = -1;
     if (playerMove == computerMove) {
